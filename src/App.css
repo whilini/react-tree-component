@@ -1,0 +1,40 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.tree-item {
+  padding-bottom: 5px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.indent-container {
+  height: 1.5rem;
+  display: flex;
+  gap: 5px;
+}
+
+.indent-item {
+  /* background-color: lightgray; */
+  width: 1.5rem;
+}
+
+.folder-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid gray;
+  display: block;
+}

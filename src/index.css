@@ -1,0 +1,9 @@
+:root {
+  font-weight: 600;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: 100vh;
+}
