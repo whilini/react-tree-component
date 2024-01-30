@@ -28,7 +28,6 @@ ul {
 }
 
 .indent-item {
-  /* background-color: lightgray; */
   width: 1.5rem;
 }
 
@@ -37,4 +36,21 @@ ul {
   height: 1.5rem;
   border: 1px solid gray;
   display: block;
+  box-sizing: border-box;
+}
+
+.folder {
+  background-color: lightcoral;
+}
+
+.last-folder {
+  background-color: lightsalmon;
+}
+
+.leaf {
+  background-color: lightgreen;
+}
+
+.last-leaf {
+  background-color: lightblue;
 }

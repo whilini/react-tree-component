@@ -1,5 +1,7 @@
 import "./App.css";
 import List from "./tree/List";
+import StringLineList from "./stringLineTree/StringLineList";
+import LineList from "./lineTree/LineList";
 
 const treeData = [
   {
@@ -132,7 +134,9 @@ function App() {
   return (
     <>
       <h1>Tree</h1>
-      <List level={0} childList={treeData} />
+      {/* <List level={0} childList={treeData} /> */}
+      {/* <StringLineList level={0} childList={treeData} /> */}
+      <LineList level={0} childList={treeData} />
     </>
   );
 }
