@@ -2,8 +2,13 @@ import "./App.css";
 import List from "./tree/List";
 import StringLineList from "./stringLineTree/StringLineList";
 import LineList from "./lineTree/LineList";
+import SearchList from "./searchTree/SearchList";
+import { useState, createContext } from "react";
+import { Provider } from "react-redux";
+import { store } from "./redux";
+import Container from "./searchBar/Container";
 
-const treeData = [
+export const treeData = [
   {
     title: "parent 1",
     key: "0-0",
@@ -130,13 +135,30 @@ const treeData = [
   },
 ];
 
+export const generatedTreeData = [];
+const generateList = (data) => {
+  for (let i = 0; i < data.length; i++) {
+    const node = data[i];
+    const { key, title } = node;
+    generatedTreeData.push({ key, title });
+    if (node.children) {
+      generateList(node.children);
+    }
+  }
+};
+
+generateList(treeData);
+
 function App() {
   return (
     <>
       <h1>Tree</h1>
       {/* <List level={0} childList={treeData} /> */}
       {/* <StringLineList level={0} childList={treeData} /> */}
-      <LineList level={0} childList={treeData} />
+      {/* <LineList level={0} childList={treeData} /> */}
+      <Provider store={store}>
+        <Container />
+      </Provider>
     </>
   );
 }

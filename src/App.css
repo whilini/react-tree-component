@@ -54,3 +54,7 @@ ul {
 .last-leaf {
   background-color: lightblue;
 }
+
+.site-tree-search-value {
+  color: #f50;
+}
